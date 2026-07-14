@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://cio.com/olympic/resultat"
+           targetNamespace="http://cio.com/olympic/resultat"
+           elementFormDefault="qualified">
+
+    <xs:element name="getResultatRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getResultatResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="resultat" type="tns:resultat"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getResultatsByAthleteRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="athleteId" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getResultatsByAthleteResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="resultat" type="tns:resultat" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getTableauMedaillesRequest">
+        <xs:complexType/>
+    </xs:element>
+
+    <xs:element name="getTableauMedaillesResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="medaillePays" type="tns:medaillePays" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="resultat">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long"/>
+            <xs:element name="position" type="xs:int"/>
+            <xs:element name="performance" type="xs:string" minOccurs="0"/>
+            <xs:element name="medaille" type="xs:string"/>
+            <xs:element name="epreuveNom" type="xs:string"/>
+            <xs:element name="athleteNom" type="xs:string"/>
+            <xs:element name="athletePrenom" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="medaillePays">
+        <xs:sequence>
+            <xs:element name="pays" type="xs:string"/>
+            <xs:element name="codeIso" type="xs:string"/>
+            <xs:element name="or" type="xs:long"/>
+            <xs:element name="argent" type="xs:long"/>
+            <xs:element name="bronze" type="xs:long"/>
+            <xs:element name="total" type="xs:long"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

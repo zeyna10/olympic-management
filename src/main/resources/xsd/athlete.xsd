@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://cio.com/olympic/athlete"
+           targetNamespace="http://cio.com/olympic/athlete"
+           elementFormDefault="qualified">
+
+    <xs:element name="getAthleteRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getAthleteResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="athlete" type="tns:athlete"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getAllAthletesRequest">
+        <xs:complexType/>
+    </xs:element>
+
+    <xs:element name="getAllAthletesResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="athlete" type="tns:athlete" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="athlete">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long"/>
+            <xs:element name="nom" type="xs:string"/>
+            <xs:element name="prenom" type="xs:string"/>
+            <xs:element name="sexe" type="xs:string"/>
+            <xs:element name="dateNaissance" type="xs:date"/>
+            <xs:element name="nationalite" type="xs:string"/>
+            <xs:element name="discipline" type="xs:string"/>
+            <xs:element name="taille" type="xs:double" minOccurs="0"/>
+            <xs:element name="poids" type="xs:double" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
