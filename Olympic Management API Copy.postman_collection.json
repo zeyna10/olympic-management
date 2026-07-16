@@ -1,0 +1,1078 @@
+{
+  "info": {
+    "_postman_id": "e98e5a08-00e9-4a08-a934-1dd70d58c232",
+    "name": "Olympic Management API Copy",
+    "description": "Collection complète des tests REST et SOAP pour la plateforme de gestion des Jeux Olympiques - Examen Web Services",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52243068",
+    "_collection_link": "https://go.postman.co/collection/52243068-e98e5a08-00e9-4a08-a934-1dd70d58c232?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "REST - Pays",
+      "item": [
+        {
+          "name": "Creer un pays",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nom\": \"Senegal\",\n  \"codeIso\": \"SEN\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/pays",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "pays"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Lister tous les pays",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/pays",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "pays"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtenir un pays par id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/pays/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "pays",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Modifier un pays",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nom\": \"Senegal\",\n  \"codeIso\": \"SEN\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/pays/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "pays",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Supprimer un pays",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/pays/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "pays",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "REST - Disciplines",
+      "item": [
+        {
+          "name": "Creer une discipline",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nom\": \"Athletisme\",\n  \"description\": \"Courses, sauts et lancers\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/disciplines",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "disciplines"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Lister toutes les disciplines",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/disciplines",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "disciplines"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtenir une discipline par id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/disciplines/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "disciplines",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Lister les athletes d'une discipline",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/disciplines/1/athletes",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "disciplines",
+                "1",
+                "athletes"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Modifier une discipline",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nom\": \"Athletisme\",\n  \"description\": \"Courses, sauts et lancers - mis a jour\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/disciplines/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "disciplines",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Supprimer une discipline",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/disciplines/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "disciplines",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "REST - Athletes",
+      "item": [
+        {
+          "name": "Creer un athlete",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nom\": \"Diop\",\n  \"prenom\": \"Amadou\",\n  \"sexe\": \"H\",\n  \"dateNaissance\": \"2000-05-15\",\n  \"taille\": 1.85,\n  \"poids\": 78,\n  \"pays\": { \"id\": 1 },\n  \"discipline\": { \"id\": 1 }\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/athletes",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "athletes"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Lister tous les athletes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/athletes",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "athletes"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtenir un athlete par id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/athletes/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "athletes",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Recherche multicritere (nom/prenom)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/athletes/search?q=Diop",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "athletes",
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "Diop"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Athletes par discipline",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/athletes/discipline/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "athletes",
+                "discipline",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Athletes par pays",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/athletes/pays/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "athletes",
+                "pays",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Modifier un athlete (complet - PUT)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nom\": \"Diop\",\n  \"prenom\": \"Amadou\",\n  \"sexe\": \"H\",\n  \"dateNaissance\": \"2000-05-15\",\n  \"taille\": 1.86,\n  \"poids\": 79,\n  \"pays\": { \"id\": 1 },\n  \"discipline\": { \"id\": 1 }\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/athletes/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "athletes",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Modifier un athlete (partiel - PATCH)",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"poids\": 80\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/athletes/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "athletes",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Supprimer un athlete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/athletes/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "athletes",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "REST - Epreuves",
+      "item": [
+        {
+          "name": "Creer une epreuve",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nom\": \"100m Hommes\",\n  \"dateEpreuve\": \"2026-08-05\",\n  \"genre\": \"Homme\",\n  \"discipline\": { \"id\": 1 }\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/epreuves",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "epreuves"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Lister toutes les epreuves",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/epreuves",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "epreuves"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtenir une epreuve par id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/epreuves/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "epreuves",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Epreuves par discipline",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/epreuves/discipline/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "epreuves",
+                "discipline",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Epreuves par date",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/epreuves/date?jour=2026-08-05",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "epreuves",
+                "date"
+              ],
+              "query": [
+                {
+                  "key": "jour",
+                  "value": "2026-08-05"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Modifier une epreuve",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nom\": \"100m Hommes - Finale\",\n  \"dateEpreuve\": \"2026-08-05\",\n  \"genre\": \"Homme\",\n  \"discipline\": { \"id\": 1 }\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/epreuves/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "epreuves",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Supprimer une epreuve",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/epreuves/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "epreuves",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "REST - Resultats",
+      "item": [
+        {
+          "name": "Creer un resultat (medaille auto)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"position\": 1,\n  \"performance\": \"9.58s\",\n  \"epreuve\": { \"id\": 1 },\n  \"athlete\": { \"id\": 1 }\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/resultats",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "resultats"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Lister tous les resultats",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/resultats",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "resultats"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtenir un resultat par id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/resultats/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "resultats",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Resultats d'une epreuve",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/resultats/epreuve/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "resultats",
+                "epreuve",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Resultats d'un athlete",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/resultats/athlete/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "resultats",
+                "athlete",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Podium d'une epreuve",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/resultats/epreuve/1/podium",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "resultats",
+                "epreuve",
+                "1",
+                "podium"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Modifier un resultat",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"position\": 1,\n  \"performance\": \"9.55s\",\n  \"epreuve\": { \"id\": 1 },\n  \"athlete\": { \"id\": 1 }\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/resultats/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "resultats",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Supprimer un resultat",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/resultats/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "resultats",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "REST - Medailles",
+      "item": [
+        {
+          "name": "Tableau des medailles",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/medailles",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "medailles"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "REST - Dashboard",
+      "item": [
+        {
+          "name": "Statistiques generales",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/dashboard/statistiques",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "dashboard",
+                "statistiques"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Classement par points",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/dashboard/classement-points",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "dashboard",
+                "classement-points"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Medailles par pays",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/dashboard/medailles-par-pays",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "dashboard",
+                "medailles-par-pays"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "SOAP - Athletes",
+      "item": [
+        {
+          "name": "WSDL - Athletes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/ws/athletes.wsdl",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "ws",
+                "athletes.wsdl"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAthleteRequest",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "text/xml; charset=utf-8"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"\n                   xmlns:ath=\"http://cio.com/olympic/athlete\">\n    <soapenv:Header/>\n    <soapenv:Body>\n        <ath:getAthleteRequest>\n            <ath:id>1</ath:id>\n        </ath:getAthleteRequest>\n    </soapenv:Body>\n</soapenv:Envelope>"
+            },
+            "url": {
+              "raw": "{{base_url}}/ws",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "ws"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAllAthletesRequest",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "text/xml; charset=utf-8"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"\n                   xmlns:ath=\"http://cio.com/olympic/athlete\">\n    <soapenv:Header/>\n    <soapenv:Body>\n        <ath:getAllAthletesRequest/>\n    </soapenv:Body>\n</soapenv:Envelope>"
+            },
+            "url": {
+              "raw": "{{base_url}}/ws",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "ws"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "SOAP - Resultats",
+      "item": [
+        {
+          "name": "WSDL - Resultats",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/ws/resultats.wsdl",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "ws",
+                "resultats.wsdl"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getResultatRequest",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "text/xml; charset=utf-8"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"\n                   xmlns:res=\"http://cio.com/olympic/resultat\">\n    <soapenv:Header/>\n    <soapenv:Body>\n        <res:getResultatRequest>\n            <res:id>1</res:id>\n        </res:getResultatRequest>\n    </soapenv:Body>\n</soapenv:Envelope>"
+            },
+            "url": {
+              "raw": "{{base_url}}/ws",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "ws"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getResultatsByAthleteRequest",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "text/xml; charset=utf-8"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"\n                   xmlns:res=\"http://cio.com/olympic/resultat\">\n    <soapenv:Header/>\n    <soapenv:Body>\n        <res:getResultatsByAthleteRequest>\n            <res:athleteId>1</res:athleteId>\n        </res:getResultatsByAthleteRequest>\n    </soapenv:Body>\n</soapenv:Envelope>"
+            },
+            "url": {
+              "raw": "{{base_url}}/ws",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "ws"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getTableauMedaillesRequest",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "text/xml; charset=utf-8"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"\n                   xmlns:res=\"http://cio.com/olympic/resultat\">\n    <soapenv:Header/>\n    <soapenv:Body>\n        <res:getTableauMedaillesRequest/>\n    </soapenv:Body>\n</soapenv:Envelope>"
+            },
+            "url": {
+              "raw": "{{base_url}}/ws",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "ws"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8081"
+    }
+  ]
+}
